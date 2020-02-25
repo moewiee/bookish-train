@@ -9,7 +9,7 @@ model.load_state_dict(checkpoint.pop("state_dict"))
 model.eval()
 
 img = Image.open("examples/download.jpeg").convert("L")
-img = img.resize((64,64))
+img = img.resize((32,32))
 img = to_tensor(img)
 img = img.unsqueeze(0)
 
